@@ -13,6 +13,11 @@ STM32F103C8T6_W25Q64
 4. 最小的擦除单元是1个扇区，1扇区=4KBytes=4096Bytes。如果你怕擦除时候会擦掉其他的data，就需要把原来的整个扇区数据读出来，改好要改的那个byte再写回去。
 5. 写入的时候最多只能写256bytes，如果写多了就会覆盖掉最开始写的那个。
 ![image](https://github.com/user-attachments/assets/31e61275-3d91-4deb-8fed-b10eb2572e9e)
+
 注意数据手册里面的写时间。扇区写时间，块写时间等
+
+SPI的代码部分，传输数据流程如下：上升沿移入数据，下降沿移出数据
+SS下降沿--->移出第一个数据--->SCK上升沿--->移入一个数据--->SCK下降沿--->移出第二个数据
+![image](https://github.com/user-attachments/assets/d6a6f41c-08aa-454e-bc7d-4c9700b17786)
 
 
