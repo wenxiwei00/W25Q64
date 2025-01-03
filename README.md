@@ -1,4 +1,4 @@
-# W25Q64
+# W25Q64 软件SPI，代码手动翻转电平
 STM32F103C8T6_W25Q64
 ![image](https://github.com/user-attachments/assets/4cc24f25-bf99-4fb8-9444-61a558bbc26f)
 1. 整个存储器被划分为block，block划分为sector，sector划分为page
